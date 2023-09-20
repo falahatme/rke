@@ -34,7 +34,23 @@ See all kubernetes version supported list
 rke config --list-version
 
 # list all image for all version
-rke config --list-version --all --system-images
+rke config --list-version --all --system-images > rancher-images.txt
+
+```
+
+Make rancher-save-images.sh an executable:
+
+```
+
+chmod +x rancher-save-images.sh
+
+```
+
+Run rancher-save-images.sh with the rancher-images.txt image list to create a tarball of all the required images:
+
+```
+
+./rancher-save-images.sh --image-list ./rancher-images.txt
 
 ```
 
