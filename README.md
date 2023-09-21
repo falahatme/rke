@@ -33,16 +33,14 @@ See all kubernetes version supported list
 # list all kubernetes version support
 rke config --list-version
 
+```
+
+save list all image for all version in rancher-images.txt
+
+```
+
 # list all image for all version
 rke config --list-version --all --system-images > rancher-images.txt
-
-```
-
-Make rancher-save-images.sh an executable:
-
-```
-
-chmod +x rancher-save-images.sh
 
 ```
 
@@ -50,6 +48,7 @@ Run rancher-save-images.sh with the rancher-images.txt image list to create a ta
 
 ```
 
+chmod +x rancher-save-images.sh
 ./rancher-save-images.sh --image-list ./rancher-images.txt
 
 ```
